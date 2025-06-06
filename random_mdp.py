@@ -25,7 +25,7 @@ def update_length_display():
 
 '''définir ouvrir page web'''
 def open_github():
-    webbrowser.open_new("https://darkgpt.io")
+    webbrowser.open_new("https://github.com/JustStupidBoy/mdp_creator")
 
 '''générer mdp'''
 def generate():
@@ -50,44 +50,44 @@ window.geometry("400x500")
 window.minsize(500, 500)
 window.maxsize(500, 500)
 window.iconbitmap("src\\icone.ico")
-window.config(background="#000000")
+window.config(background="grey")
 
 '''frames'''
-frame = Frame(window, bg='#000000', bd=1, relief=SUNKEN)
-framedeux = Frame(window, bg='#000000', bd=1, relief=SUNKEN)
-frametrois = Frame(window, bg='#000000', bd=1, relief=SUNKEN)
+frame = Frame(window, bg="#c0c0c0", bd=1, relief=SUNKEN)
+framedeux = Frame(window, bg='#c0c0c0', bd=1, relief=SUNKEN)
+frametrois = Frame(window, bg="#c0c0c0", bd=1, relief=SUNKEN)
 
 '''titre'''
-label_title = Label(frame, text="create password", font=("courrier", 20), bg='#000000', fg='white')
+label_title = Label(frame, text="create password", font=("courrier", 20), bg="#c0c0c0", fg='blue')
 label_title.pack()
 
 '''bouton github'''
-darkgpt_button = Button(frame, text="github", font=("courrier", 20), bg='red', fg='black', command=open_github)
+darkgpt_button = Button(frame, text="github", font=("courrier", 20), bg='blue', fg='white', command=open_github)
 darkgpt_button.pack(padx=10, fill=X)
 
 '''champ mot de passe (sélectionnable)'''
-password_entry = Entry(framedeux, font=("courrier", 20), bg='#000000', fg='black', justify='center', relief=FLAT)
+password_entry = Entry(framedeux, font=("courrier", 20), bg='#000000', fg='blue', justify='center', relief=FLAT)
 password_entry.pack(padx=10, pady=10, fill=X)
 password_entry.config(state='readonly')
 
 '''bouton copier'''
-copy_button = Button(framedeux, text="Copier", font=("courrier", 15), bg='red', fg='black', command=copy_password)
+copy_button = Button(framedeux, text="Copier", font=("courrier", 15), bg='blue', fg='white', command=copy_password)
 copy_button.pack(padx=10, pady=5, fill=X)
 
 '''bouton génération'''
-generate_button = Button(frame, text="create password", font=("courrier", 20), bg='red', fg='black', command=generate)
+generate_button = Button(frame, text="create password", font=("courrier", 20), bg='blue', fg='white', command=generate)
 generate_button.pack(padx=10, fill=X)
 
 '''bouton +'''
-plus_button = Button(frame, text="+", font=("courrier", 20), bg='red', fg='black', command=plus)
+plus_button = Button(frame, text="+", font=("courrier", 20), bg='blue', fg='white', command=plus)
 plus_button.pack(padx=10, fill=X)
 
 '''bouton -'''
-moin_button = Button(frame, text="-", font=("courrier", 20), bg='red', fg='black', command=moin)
+moin_button = Button(frame, text="-", font=("courrier", 20), bg='blue', fg='white', command=moin)
 moin_button.pack(padx=10, fill=X)
 
 '''affichage compteur'''
-plus_label = Label(frametrois, text=f"Longueur : {x}", font=("courrier", 20), bg='#000000', fg='white')
+plus_label = Label(frametrois, text=f"Longueur : {x}", font=("courrier", 20), bg='blue', fg='white')
 plus_label.pack()
 
 '''ajouter frames'''
